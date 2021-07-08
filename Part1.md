@@ -1,3 +1,5 @@
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
 3.34.216.162	10.0.0.145	util1.com util
 
 52.79.154.137	10.0.0.157	mn.com mn
