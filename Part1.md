@@ -1,4 +1,5 @@
-```sudo systemctl start tuned
+```
+sudo systemctl start tuned
 sudo tuned-adm off
 sudo tuned-adm list
 sudo systemctl stop tuned
