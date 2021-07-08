@@ -1,4 +1,30 @@
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```sudo systemctl start tuned
+sudo tuned-adm off
+sudo tuned-adm list
+sudo systemctl stop tuned
+sudo systemctl disable tuned
+확인
+$ cat /sys/kernel/mm/transparent_hugepage/enabled
+always madvise [never]
+$ cat /sys/kernel/mm/transparent_hugepage/defrag
+always madvise [never]
+5. List your network interface configuration
+$ ifconfig -a
+6. Show that forward and reverse host lookups are correctly resolved
+• For /etc/hosts, use getent
+• For DNS, use nslookup
+$ sudo vi /etc/hosts
+sudo hostnamectl set-hostname m1
+$ getent hosts cm1
+$ getent hosts 172.31.2.32
+7. Show the nscd service is running
+$ sudo systemctl status nscd
+8. Show the ntpd service is running
+$ sudo systemctl status ntp
+** Disable IPV6
+$sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+$ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+```
 
 3.34.216.162	10.0.0.145	util1.com util
 
