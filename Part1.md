@@ -1,3 +1,6 @@
+http://ec2-3-34-114-205.ap-northeast-2.compute.amazonaws.com/cloudera-parcels/cdh5/5.16.2/
+
+
 ```
 sudo systemctl start tuned
 sudo tuned-adm off
