@@ -1,3 +1,41 @@
+```
+   24  sudo yum install -y java-1.8.0-openjdk-devel
+   25  java -version
+   26  exit
+   27  sudo wget http://ec2-3-34-114-205.ap-northeast-2.compute.amazonaws.com/cloudera-repos/cdh5/5.16.2/cloudera-manager.repo -P /etc/yum.repos.d/
+   ```
+   vi cloudera-manager.repo 가셔서
+   Baseurl=http://ec2-3-34-114-205.ap-northeast-2.compute.amazonaws.com/cloudera-repos/cdh5/5.16.2/
+   
+   
+gpgkey=http://ec2-3-34-114-205.ap-northeast-2.compute.amazonaws.com/cloudera-repos/cdh5/5.16.2/RPM-GPG-KEY-cloudera
+   
+   변경
+   ```
+   30  sudo rpm --importhttp://ec2-3-34-114-205.ap-northeast-2.compute.amazonaws.com/cloudera-repos/cdh5/5.16.2/RPM-GPG-KEY-cloudera
+   ```
+   ```
+   31  sudo yum install -y java-1.8.0-openjdk-devel
+   57  sudo yum install mariadb-server
+   58  sudo systemctl stop mariadb
+   59  sudo vi /etc/my.cnf
+   60  sudo systemctl enable mariadb
+   61  sudo systemctl start mariadb
+   62  sudo /usr/bin/mysql_secure_installation
+   93  sudo wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz
+   94  tar zxvf mysql-connector-java-5.1.47.tar.gz
+   95  sudo mkdir -p /usr/share/java/
+   96  cd mysql-connector-java-5.1.47
+   97  sudo cp mysql-connector-java-5.1.47-bin.jar /usr/share/java/mysql-connector-java.jar
+   98  cd /usr/share/java/
+   99  sudo yum install -y mysql-connector-java
+ 114  sudo passwd centos
+ ```
+
+
+
+
+
 http://ec2-3-34-114-205.ap-northeast-2.compute.amazonaws.com/cloudera-parcels/cdh5/5.16.2/
 
 
